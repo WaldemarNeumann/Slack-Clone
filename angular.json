@@ -122,8 +122,8 @@
             "prerender": false,
             "ssr": false,
             "browserTarget": "slack-clone:build:production",
-            "firebaseProject": "slack-clone-39542",
-            "firebaseHostingSite": "slack-clone-39542"
+            "firebaseProject": "slack-clone-10222",
+            "firebaseHostingSite": "slack-clone-10222"
           }
         }
       }

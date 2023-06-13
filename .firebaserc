@@ -6,9 +6,16 @@
           "slack-clone-39542"
         ]
       }
+    },
+    "slack-clone-10222": {
+      "hosting": {
+        "slack-clone": [
+          "slack-clone-10222"
+        ]
+      }
     }
   },
   "projects": {
-    "default": "slack-clone-39542"
+    "default": "slack-clone-10222"
   }
 }
