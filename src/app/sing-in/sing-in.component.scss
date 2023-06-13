@@ -1,0 +1,111 @@
+.log-in-div {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1 {
+        color: white;
+        text-align: center;
+    }
+    h2 {
+        color: white;
+        text-align: center;
+    }
+}
+
+.logo-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 19px;
+    img {
+        width: 50px;
+        height: 30px;
+    }
+    h1 {
+        color: white;
+        margin-bottom: 0px;
+        margin-left: 10px;
+        @media(max-width: 280px) {
+            font-size: 15px;
+        }
+    }
+}
+
+button {
+    appearance: auto;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    margin-right: 10px;
+    margin-bottom: 4px;
+    padding: 0px 0px;
+    border-width: 0px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+
+.input-email {
+    width: 100%;
+    max-width: 350px;
+    height: 70px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.input-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    max-width: 500px;
+    h2 {
+        @media(max-width: 280px) {
+            font-size: 13px;
+        }
+    }
+}
+
+.mat-mdc-text-field-wrapper {
+    height: 50px;
+    flex: auto;
+}
+
+.button-log-in-div {
+    width: 100%;
+    max-width: 350px;
+}
+
+.log-in-button {
+    width: 100%;
+    background-color: purple !important;
+}
+
+.log-in-middle-line {
+    border-bottom: 2px solid white;
+    margin-top: 10px;
+    margin-bottom: 13px;
+    margin-left: 10px;
+    margin-right: 10px;
+}

@@ -1,0 +1,77 @@
+mat-card {
+    flex-direction: row;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 16px;
+    border-radius: 0px;
+    background-color: #1A1D21;
+    border: none;
+    box-shadow: none;
+
+    .mat-mdc-card-header {
+        padding: 0;
+        padding-left: 16px;
+        display: flex;
+    
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 0;
+            line-height: 20px;
+        }
+
+        span {
+            margin-left: 8px;
+            font-size: 12px;
+            color: grey;
+
+            @media (max-width: 1050px) {
+                margin-left: 0;
+            }
+
+            @media (max-width: 880px) {
+                margin-left: 8px;
+            }
+
+            @media (max-width: 630px) {
+                margin-left: 0;
+            }
+        }
+
+        .time {
+            @media (max-width: 1050px) {
+                margin-left: 8px;  
+            }
+
+            @media (max-width: 880px) {
+                margin-left: 0;  
+            }
+
+            @media (max-width: 630px) {
+                margin-left: 8px;  
+            }
+        }
+
+        @media (max-width: 1050px) {
+            flex-direction: column;
+        }
+
+        @media (max-width: 880px) {
+            flex-direction: row;
+        }
+
+        @media (max-width: 630px) {
+            flex-direction: column;
+        }
+    }
+
+    &:hover {
+        background-color: #222529;
+    }
+}
+
+.thread-ctn {
+    max-height: calc(100vh - 105.6px);
+    overflow-y: auto;
+    min-height: calc(100vh - 105.6px);
+}

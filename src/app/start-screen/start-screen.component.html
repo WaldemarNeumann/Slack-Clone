@@ -1,0 +1,13 @@
+<app-header #headerComponent></app-header>
+
+<mat-drawer-container autosize>
+    <mat-drawer autosize #drawer class="sidenav" [opened]="classService.hideSidenavClass ? false : true" mode="side">
+        <app-sidenav></app-sidenav>
+    </mat-drawer>
+
+    <div class="router-ctn">
+        <router-outlet name='chats'></router-outlet>
+        <app-thread [messageId]="messageId" [channelId]="channelId" *ngIf="threadOpened"></app-thread>
+    </div>
+
+</mat-drawer-container>

@@ -1,0 +1,63 @@
+<div class="headline-ctn sidenav-header">
+    <img class="header-logo" src="../assets/img/sidenav-logo.png">
+    Slack Clone
+</div>
+
+<!-- <div class="upper-sidenav">
+    <ul class="menu-items">
+        <li routerLink="/app" routerLinkActive="active">
+            <mat-icon>send</mat-icon>Threads</li>
+    </ul>
+</div> -->
+
+<div class="lower-sidenav">
+
+    <div class="small-headline flex-ac">
+
+        <span>Channels</span>
+        <mat-icon (click)="turnArrowTo()" [ngClass]="turnArrow ? 'rotate90' : ''" style="transition: all 125ms ease-in-out" fontIcon="arrow_drop_down"></mat-icon>
+
+    </div>
+
+
+    <div *ngIf="!turnArrow">
+        <ul class="menu-items">
+            <li *ngFor="let channel of allChannels" (click)="toggle()" [routerLink]="['/app', { outlets: { chats: ['channel', channel.id]} }]" routerLinkActive="active">
+                <div class="menu-items-icon-ctn">
+                    <mat-icon>tag</mat-icon>
+                </div>
+                <span>{{ channel.channelName }}</span>
+            </li>
+        </ul>
+
+        <div (click)="openDialog()" class="add-channel">
+            <mat-icon>add</mat-icon>
+            <span>Create new channel</span>
+        </div>
+    </div>
+
+
+
+    <div class="small-headline flex-ac">
+
+        <span>Direct Messages</span>
+        <mat-icon (click)="turnArrowTo2()" [ngClass]="turnArrow2 ? 'rotate90' : ''" style="transition: all 125ms ease-in-out" fontIcon="arrow_drop_down"></mat-icon>
+
+    </div>
+
+
+    <div *ngIf="!turnArrow2">
+        <ul class="menu-items">
+            <li *ngFor="let dm of allDms" (click)="toggle()" [routerLink]="['/app', { outlets: { chats: ['dms', dm.id]} }]" routerLinkActive="active">
+                <img class="sidenav-profile-img" src="{{ dm.participantImage || '../assets/img/avatar.png'}}">
+                <span>   {{ dm.participantName }} </span>
+            </li>
+        </ul>
+
+        <div (click)="toggle()" [routerLink]="['/app', { outlets: { chats: 'createDm' } }]" class="add-channel">
+            <mat-icon>add</mat-icon>
+            <span>Start new chat</span>
+        </div>
+    </div>
+
+</div>

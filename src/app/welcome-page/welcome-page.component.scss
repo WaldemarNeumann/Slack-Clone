@@ -1,0 +1,64 @@
+.welcome-div {
+    padding: 25px;
+    p {
+        @media(max-width: 414px) {
+            line-height: 20px;
+        }
+        @media(max-width: 375px) {
+            line-height: 20px;
+        }
+        @media(max-width: 280px) {
+            font-size: 12px;
+            line-height: 17px;
+        }
+    }
+    li {
+        @media(max-width: 414px) {
+            line-height: 20px;
+        }
+        @media(max-width: 375px) {
+            line-height: 20px;
+        }
+        @media(max-width: 280px) {
+            font-size: 12px;
+            line-height: 17px;
+        }
+    }
+}
+
+.welcome-text {
+    font-size: 20px;
+    margin-bottom: 5px;
+    @media(max-width: 540px) {
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+    @media(max-width: 280px) {
+        font-size: 14px;
+    }
+}
+
+.welcome-user {
+    font-size: 20px;
+    color: aqua;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    @media(max-width: 540px) {
+        font-size: 20px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    @media(max-width: 280px) {
+        font-size: 14px;
+    }
+}
+
+.welcome-text-under {
+    font-size: 20px;
+    @media(max-width: 540px) {
+        font-size: 20px;
+    }
+    @media(max-width: 280px) {
+        font-size: 14px;
+    }
+}

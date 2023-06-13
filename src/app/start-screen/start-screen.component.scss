@@ -1,0 +1,37 @@
+mat-drawer-container {
+    height: calc(100vh - 49px);
+    .sidenav {
+        background-color: #19171D;
+        border-right: 1px solid #2B2A2F;
+        padding-left: 8px;
+        // width: 250px;
+        @media(max-width: 500px) {
+            width: 100%;
+        }
+    }
+}
+
+.open-sidenav {
+    display: unset !important;
+}
+
+.router-ctn {
+    background-color: #1A1D21;
+    height: calc(100vh - 49px);
+    width: 100%;
+    color: white;
+    overflow-y: none !important;
+    display: flex;
+    min-height: 660px;
+    overflow: scroll;
+    // @media(max-width: 520px) {
+    //     display: none;
+    // }
+}
+
+.router-ctn::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+

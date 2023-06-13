@@ -1,0 +1,227 @@
+.header-div {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    background-color: #121016;
+    border-bottom: 1px solid #2B2A2F;
+    justify-content: space-between;
+    img {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+.logo-icon-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12px;
+    @media(max-width: 360px) {
+        margin-left: 2px;
+    }
+}
+
+.arrow-div {
+    display: flex;
+    align-items: center;
+    margin-left: 20%;
+}
+
+.search-div {
+    display: flex;
+    align-items: center;
+    position: relative;
+    @media(max-width: 414px) {
+        margin-right: 12px;
+    }
+    @media(max-width: 375px) {
+        margin-right: 30px;
+    }
+    input {
+        border-radius: 5px;
+        width: 30vw;
+        height: 25px;
+        background-color: #72727239;
+        writing-mode: horizontal-tb !important;
+        text-rendering: auto;
+        letter-spacing: normal;
+        word-spacing: normal;
+        line-height: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: start;
+        appearance: auto;
+        cursor: text;
+        margin: 0em;
+        padding: 1px 2px;
+        border-width: 2px;
+        border-style: inset;
+        border-color: rgba(0, 0, 0, 0);
+        border-image: initial;
+        @media(max-width: 414px) {
+            width: 40vw;
+        }
+        @media(max-width: 375px) {
+            width: 40vw;
+        }
+    }
+    img {
+        position: absolute;
+        right: 5px;
+    }
+    .search {
+        position: absolute;
+        right: 30px;
+    }
+}
+
+.header-info-div {
+    margin-right: 20px;
+    position: relative;
+    display: flex;
+    img {
+        width: 15px;
+        height: 15px;
+        border-color: white;
+    }
+    .header-profile {
+        width: 30px;
+        height: 30px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    p {
+        color: white;
+    }
+}
+
+.mat-mdc-menu-item {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    // width: 81px !important;
+    text-align: center !important;
+    min-height: 30px !important;
+    margin-right: 0px !important;
+}
+
+.mat-mdc-menu-panel.mat-mdc-menu-panel {
+    min-width: 0px !important;
+    max-width: 0px !important;
+}
+
+.header-username {
+    position: absolute;
+    right: 30px;
+    top: 3px;
+    text-align: center;
+    color: white;
+    font-size: 10px;
+    width: 80px;
+    line-height: 13px;
+    @media(max-width: 414px) {
+        width: 42px;
+    }
+}
+
+.mat-mdc-menu-panel {
+    min-width: 0px !important;
+    max-width: 0px !important;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+}
+
+.input-field {
+    color: white;
+}
+
+.menuIcon {
+    color: white;
+    cursor: pointer;
+    display: none;
+    @media(max-width: 800px) {
+        display: unset;
+    }
+}
+
+svg {
+    height: 50px;
+    position: absolute;
+    width: 50px;
+}
+
+.plate {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+// .burger {
+//     // filter: url(#gooeyness);
+// }
+.x {
+    transform: scale(0);
+    transition: transform 400ms;
+}
+
+.line {
+    fill: none;
+    stroke: white;
+    stroke-width: 6px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform-origin: 50%;
+    transition: transform 500ms;
+}
+
+.x .line {
+    stroke-width: 5.5px;
+}
+
+
+/* First plate */
+
+.plate1 .line2 {
+    stroke-dasharray: 40 200;
+    stroke-dashoffset: 0px;
+}
+
+.plate1 .line3 {
+    stroke-dasharray: 40 179;
+    stroke-dashoffset: 0px;
+}
+
+.active .line {
+    animation: rotateLines 2s linear infinite;
+}
+
+@keyframes rotateLines {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.active.plate1 .line1 {
+    transform: scale(0, 1);
+    transition: transform 500ms 100ms;
+}
+
+.active.plate1 .line2 {
+    stroke-dasharray: 5px 200;
+    stroke-dashoffset: -164px;
+}
+
+.active.plate1 .line3 {
+    stroke-dasharray: 5px 179;
+    stroke-dashoffset: -142px;
+}
+
+.active .x {
+    transform: scale(1);
+    transition: transform 400ms 350ms;
+}
