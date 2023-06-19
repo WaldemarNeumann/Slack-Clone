@@ -6,4 +6,4 @@ export const environment = {
     apiKey: 'AIzaSyAZQCzFSng5fayFnrdYzVeH86mHW3RbdFc',
     authDomain: 'slack-clone-10222.firebaseapp.com',
     messagingSenderId: '527235521517',
-  },};
+},};

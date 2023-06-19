@@ -64,6 +64,7 @@ export class ChannelComponent implements OnInit {
 
       this.searchTerm.searchTermChange.subscribe((searchTerm: string) => {
          this.onSearchTermChange(searchTerm);
+         
       });
 
    }

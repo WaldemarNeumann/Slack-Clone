@@ -1,6 +1,5 @@
 <div class="headline-ctn sidenav-header">
-    <img class="header-logo" src="../assets/img/sidenav-logo.png">
-    Slack Clone
+    <img class="header-logo" src="./assets/img/sidenav-logo.png"> Slack Clone
 </div>
 
 <!-- <div class="upper-sidenav">
@@ -49,7 +48,7 @@
     <div *ngIf="!turnArrow2">
         <ul class="menu-items">
             <li *ngFor="let dm of allDms" (click)="toggle()" [routerLink]="['/app', { outlets: { chats: ['dms', dm.id]} }]" routerLinkActive="active">
-                <img class="sidenav-profile-img" src="{{ dm.participantImage || '../assets/img/avatar.png'}}">
+                <img class="sidenav-profile-img" src="{{ dm.participantImage || './assets/img/avatar.png'}}">
                 <span>   {{ dm.participantName }} </span>
             </li>
         </ul>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { CollectionReference, DocumentData, Firestore, addDoc, collection, collectionData, doc, docData, orderBy, query } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Channel } from 'src/models/channel.class';
@@ -56,11 +56,10 @@ export class ThreadComponent implements OnInit, OnChanges {
       this.getChannel();
       this.getMessage();
       this.getUser();
-      this.getAnswers()
-
+      this.getAnswers();
+     
       this.searchTerm.searchTermChange.subscribe((searchTerm: string) => {
          this.onSearchTermChange(searchTerm);
-         
       });
    }
 
