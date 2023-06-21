@@ -52,7 +52,6 @@ export class DirectMessagesComponent implements OnInit {
         this.getDms();
         this.getCurrentUser();
         this.getMessages();
-     
       }
     });
 
@@ -74,8 +73,7 @@ export class DirectMessagesComponent implements OnInit {
       this.allMessages = changes;
       this.updateFilteredMessages()
     });
-  
-    // Listen for changes on the usersColl collection
+ 
     onSnapshot(this.usersColl, (snapshot) => {
       snapshot.docChanges().forEach((change) => {
         const user = change.doc.data() as User;
@@ -141,7 +139,6 @@ export class DirectMessagesComponent implements OnInit {
 
 
   addMessage(content) {
-    //Add the message to the sender's document
     const dmColl = collection(this.usersRef, 'dms');
     const dmRef = doc(dmColl, this.dmId);
     this.messagesRef = collection(dmRef, 'messages');
@@ -154,7 +151,6 @@ export class DirectMessagesComponent implements OnInit {
       this.updateFilteredMessages();
    });
 
-    // Add the message to the receiver's document
     const receiverMessagesRef = collection(this.participantsRef, 'dms', this.dmId, 'messages');
     const receiverMessage = new Message();
     receiverMessage.message = content;
@@ -168,13 +164,13 @@ export class DirectMessagesComponent implements OnInit {
 
   onSearchTermChange(searchTerm: string) {
     if (searchTerm.trim() === '') {
-       this.filterAllMessages = this.allMessages; // Wenn die Suchleiste leer ist, zeige alle Nachrichten an
+       this.filterAllMessages = this.allMessages; 
     } else {
        searchTerm = searchTerm.toLowerCase();
        this.filterAllMessages = this.allMessages.filter(message => {
           const messageText = message.message.toLowerCase();
-          const userName = message.user.toLowerCase(); // Konvertiere den eingeloggten Namen zu Kleinbuchstaben
-          return messageText.includes(searchTerm) || userName.includes(searchTerm); // Filtere die Nachrichten basierend auf dem Suchbegriff oder dem eingeloggten Namen
+          const userName = message.user.toLowerCase(); 
+          return messageText.includes(searchTerm) || userName.includes(searchTerm);
        });
     }
  }
